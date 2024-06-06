@@ -1,169 +1,143 @@
-/* App.css */
-
-.app {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+:root {
+  height: 100%;
   background-color: gray;
   border: #21a1f1 20px solid;
 }
-
-.title {
-  color: goldenrod;
-  text-align: center;
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-.searchResult {
-  text-align: center;
-  background-color: #fff;
-  border: 1px solid #ddd;
+ 
+.content {
+  background: #f9f9f9;
+  padding: 20px;
   border-radius: 5px;
 }
 
-.content {
-  padding: 20px;
-  flex-grow: 1;
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  
 }
 
-.form {
-  margin-top: 20px;
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .input {
+  flex: 1;
   padding: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .submitButton {
   padding: 10px 20px;
-  background-color: #9efb61;
-  color: #212020;
+  margin-left: 10px;
   border: none;
+  background: #28a745;
+  color: white;
   cursor: pointer;
-  border-radius: 5px;
-}
-
-.submitButton:hover {
-  background-color: #21f13d;
+  border-radius: 4px;
 }
 
 .error {
   color: red;
-  font-style: italic;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
- 
- 
+  margin-top: 10px;
+  text-align: center;
 }
 
 .itemContainer {
+  margin-top: 20px;
+}
+
+.item {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 15px;
-  padding: 15px;
-}
-
-
-.deleteButton {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #ff4d4d;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: white;
-}
-
-.deleteButton:hover {
-  background-color: #f4a536;
-}
-
-.updateButton {
-  margin-top: 10px;
-  margin-left: 10px;
-  padding: 5px 10px ;
-  background-color: #4caf50;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: white;
-}
-
-.updateButton:hover {
-  background-color: #45a082;
-}
-
-.updateForm {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.item.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.completeButton, .deleteButton, .editButton, .saveButton {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.completeButton {
+  background: #007bff;
+  color: white;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.title.completed {
+  font-style: italic;
+  text-decoration: line-through;
+  color: #888;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.completeButton, .editButton, .saveButton, .deleteButton {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.completeButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.editButton {
+  background-color: #ffeb3b;
+  color: black;
 }
 
 .saveButton {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #61dafb;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #008cba;
   color: white;
 }
 
-.noItems {
-  color: blue;
-  font-style: italic;
-  background-color: #ddd;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.toggleButton {
-  margin-right: 10px;
-  padding: 10px 20px;
-  background-color: #31c2ea;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.toggleButton:hover {
-  background-color: #21a1f1;
-}
-
-.createButton {
-  padding: 10px 20px;
-  background-color: #a3af4c;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 20px;
+.deleteButton {
+  background-color: #f44336;
   color: white;
 }
 
-.createButton:hover {
-  background-color: #61e428;
-}
-
-/* item */
-.item {
-  padding: 12px;
-  background-color: #ece4e4;
-  border: 1px solid blueviolet;
-  border-radius: 5px;
-  margin: 8px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+.completeButton:hover,
+.editButton:hover,
+.saveButton:hover,
+.deleteButton:hover {
+  opacity: 0.8;
 }
