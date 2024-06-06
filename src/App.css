@@ -160,8 +160,8 @@
 /* item */
 .item {
   padding: 12px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #ece4e4;
+  border: 1px solid blueviolet;
   border-radius: 5px;
   margin: 8px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
